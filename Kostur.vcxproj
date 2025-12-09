@@ -103,11 +103,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)external\freetype-2.13.3\include
+</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);freetype.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)external\freetype-2.13.3\build\Release
+</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -118,27 +122,50 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)external\freetype-2.13.3\include
+</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)external\freetype-2.13.3\build\Release
+</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);freetype.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Util.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Header\stb_image.h" />
     <ClInclude Include="Header\Util.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="TextRenderer.h" />
+    <ClInclude Include="TexturedQuad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="rect.frag" />
     <None Include="rect.vert" />
     <None Include="packages.config" />
+    <None Include="text.frag" />
+    <None Include="text.vert" />
+    <None Include="texture.frag" />
+    <None Include="texture.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="C:\Users\David\OneDrive\Радна површина\DS-DIGI.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\check.png" />
+    <Image Include="Resources\fire.png" />
+    <Image Include="Resources\remote_control.png" />
+    <Image Include="Resources\remote_control_pressed.png" />
+    <Image Include="Resources\signature.png" />
+    <Image Include="Resources\snowflake.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
