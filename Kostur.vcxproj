@@ -134,18 +134,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\Util.cpp" />
     <ClCompile Include="TextRenderer.cpp" />
+    <ClCompile Include="TexturedQuad.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Header\Circle.h" />
+    <ClInclude Include="Header\Rectangle.h" />
     <ClInclude Include="Header\stb_image.h" />
+    <ClInclude Include="Header\TextRenderer.h" />
+    <ClInclude Include="Header\TexturedQuad.h" />
     <ClInclude Include="Header\Util.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="TextRenderer.h" />
-    <ClInclude Include="TexturedQuad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="rect.frag" />
