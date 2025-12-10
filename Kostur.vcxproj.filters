@@ -27,6 +27,15 @@
     <ClCompile Include="Rectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturedQuad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\stb_image.h">
@@ -35,10 +44,16 @@
     <ClInclude Include="Header\Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="Header\TexturedQuad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Circle.h">
+    <ClInclude Include="Header\TextRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,5 +65,42 @@
     <None Include="rect.vert">
       <Filter>Source Files\Shaders</Filter>
     </None>
+    <None Include="text.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="text.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="texture.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="texture.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="C:\Users\David\OneDrive\Радна површина\DS-DIGI.TTF">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\remote_control.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\remote_control_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\snowflake.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\check.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\fire.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\signature.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
